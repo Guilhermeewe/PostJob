@@ -1,0 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import "tailwindcss";
+
+* {
+    font-family: var(--font-primary);
+    box-sizing: border-box;
+
+    button,
+    li {
+        cursor: pointer;
+    }
+
+}
+
+body,
+html {
+    background-color: var(--background-color);
+}
+
+
+@utility container-auto {
+    max-width: 1440px;
+    margin: auto
+}
+
+@utility container-full {
+    max-width: 100%;
+}
+
+@utility gray-text {
+    color: var(--text-gray);
+}
+
+
+@theme {
+    --font-primary: "SF Pro Display", "sans-serif";
+    --green-color: #6DE754;
+    --background-color: #161815;
+    --text-gray: #909090;
+}
