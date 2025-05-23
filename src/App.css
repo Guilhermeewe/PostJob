@@ -15,6 +15,10 @@
 body,
 html {
     background-color: var(--background-color);
+
+    img {
+        pointer-events: none;
+    }
 }
 
 
@@ -31,10 +35,34 @@ html {
     color: var(--text-gray);
 }
 
+@utility green-text {
+    color: var(--green-color);
+}
+
+@utility background-button {
+    background-color: var(--green-color);
+}
+
+@layer components {
+    .card-hero {
+        @apply h-50 w-96 bg-red-300 flex flex-col overflow-hidden text-wrap justify-evenly px-5 rounded-lg
+    }
+}
+
 
 @theme {
     --font-primary: "SF Pro Display", "sans-serif";
     --green-color: #6DE754;
     --background-color: #161815;
     --text-gray: #909090;
+    --card-color: #1E201D;
+}
+
+.card {
+    background-color: var(--card-color);
+}
+
+.overlay {
+    background: linear-gradient(180deg, rgba(109, 231, 84, 0.00) 0%, #6DE754 100%);
+    background-blend-mode: color;
 }

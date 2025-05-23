@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <div className='container-full'>
-            <div className="container-auto flex relative items-center gap-10 pt-16 ">
+            <div className="container-auto flex relative items-center gap-10 md:pt-16 ">
                 <div className='flex max-md:grow '>
                     <Logo />
                 </div>
