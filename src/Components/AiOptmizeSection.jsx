@@ -1,4 +1,3 @@
-import React from 'react'
 import Ilustration1 from '../assets/Illustration1.svg'
 import Ilustration2 from '../assets/Illustration2.svg'
 

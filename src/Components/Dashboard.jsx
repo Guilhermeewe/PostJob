@@ -3,12 +3,13 @@ import Dashboardimage from '../assets/Dashboardimage.svg'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+
 const Dashboard = () => {
     const container = useRef()
     const text1 = useRef()
     const text2 = useRef()
     const text3 = useRef()
-    const imgRef = useRef()
     gsap.registerPlugin(ScrollTrigger)
 
 
@@ -16,26 +17,29 @@ const Dashboard = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
-                start: '-100px center',
-                end: 'center center',
+                start: '-150px center',
+                end: '1000px top',
                 toggleActions: 'play pause'
             }
         })
 
         tl.from(text1.current, {
             opacity: 0,
+            duration: 0.25,
             fontSize: 0,
             y: 150,
             scaleY: 1,
             ease: "power4.out"
         }).from(text2.current, {
             opacity: 0,
+            duration: 0.25,
             fontSize: 0,
             y: 150,
             scaleY: 1,
             ease: "power4.out"
         }).from(text3.current, {
             opacity: 0,
+            duration: 0.25,
             ease: "sine.out"
         })
     })

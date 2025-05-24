@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from './Logo'
 import { FcMenu } from "react-icons/fc";
 import { useState } from 'react';

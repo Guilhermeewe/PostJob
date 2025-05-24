@@ -1,4 +1,3 @@
-import React from 'react'
 import Illustration3 from '../assets/Illustration3.svg'
 
 const Resume = () => {

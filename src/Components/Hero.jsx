@@ -48,7 +48,7 @@ const Hero = () => {
             stagger: 0.05
         }).from(text3.current, {
             opacity: 0,
-            duration: 0.5,
+            duration: 0.25,
             ease: "sine.out",
         }).from(inputRef.current, {
             delay: 0.35,
