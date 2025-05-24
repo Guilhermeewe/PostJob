@@ -2,32 +2,53 @@ import React from 'react'
 import Logo from './Logo'
 import { FcMenu } from "react-icons/fc";
 import { useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { useRef } from 'react';
 
 
 const Header = () => {
+    const container = useRef()
+    const navBarRef = useRef()
+    const buttonsRef = useRef()
+    const logoRef = useRef()
     const [isOpen, setIsOpen] = useState(false)
 
     const toogleMenuHeader = (e) => {
         setIsOpen(!isOpen)
     }
 
+    useGSAP(() => {
+        const t1 = gsap.timeline()
+
+        t1.from(container.current, {
+            opacity: 0,
+            y: -150,
+            duration: 1,
+            ease: "power4.inOut"
+
+        })
+
+
+    }, { scope: container })
+
     return (
-        <div className='container-full'>
+        <div className='container-full' ref={container}>
             <div className="container-auto flex relative items-center gap-10 md:pt-16 ">
-                <div className='flex max-md:grow '>
+                <div className='flex max-md:grow' ref={logoRef}>
                     <Logo />
                 </div>
                 <div className='md:hidden pr-4 flex flex-col justify-center items-center gap-10'>
                     <FcMenu size={35} onClick={toogleMenuHeader} />
                 </div>
-                <div className='flex grow max-md:hidden'>
-                    <ul className='flex text-center flex-row gap-6 text-[16px] gray-text font-bold max-md:hidden'>
+                <div className='flex grow max-md:hidden' >
+                    <ul className='flex text-center flex-row gap-6 text-[16px] gray-text font-bold max-md:hidden ' ref={navBarRef}>
                         <li>AI Cover Letter Generator</li>
                         <li>Resume Template</li>
                         <li>Pricing</li>
                     </ul>
                 </div>
-                <div className='flex gap-4 font-semibold max-md:hidden pr-2'>
+                <div className='flex gap-4 font-semibold max-md:hidden pr-2' ref={buttonsRef}>
                     <button type='text' className='border-2 py-2 px-8 rounded-xl text-white border-green-500 '>
                         Sign In
                     </button>

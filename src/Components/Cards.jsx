@@ -1,6 +1,5 @@
-import React from 'react'
 
-const Cards = ({ icon, tittle, text }) => {
+const Cards = ({ icon, tittle, text, }) => {
     return (
         <div className='card card-hero max-md:w-[300px] max-md:items-center max-md:text-center '>
             <span className=''>{icon}</span>
