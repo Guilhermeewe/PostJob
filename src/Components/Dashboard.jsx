@@ -44,7 +44,7 @@ const Dashboard = () => {
         })
     })
     return (
-        <div ref={container} id='container' className='container-full my-35 flex justify-center items-center '>
+        <div ref={container} id='container' className='overflow-clip container-full my-35 flex justify-center items-center '>
             <div className='container-auto bg-[#6DE754] rounded-4xl pt-10'>
                 <div className='flex flex-col justify-center items-center '>
                     <div ref={text1} className='text-5xl font-bold flex-col flex text-center max-md:text-3xl gap-2'>

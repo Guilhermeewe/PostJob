@@ -34,7 +34,7 @@ const Header = () => {
     }, { scope: container })
 
     return (
-        <div className='container-full' ref={container}>
+        <div className='overflow-clip container-full' ref={container}>
             <div className="container-auto flex relative items-center gap-10 md:pt-16 ">
                 <div className='flex max-md:grow' ref={logoRef}>
                     <Logo />

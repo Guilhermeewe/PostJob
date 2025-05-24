@@ -54,7 +54,7 @@ const Info = () => {
 
     }, { scope: container })
     return (
-        <div ref={container} className='container-full'>
+        <div ref={container} className='container-full overflow-clip '>
             <div className='container-auto flex flex-col flex-wrap'>
                 <div className='flex flex-col justify-center items-center text-5xl md:text-7xl text-white gap-2 font-bold' ref={tittleRef}>
                     <span>Spend less time</span>

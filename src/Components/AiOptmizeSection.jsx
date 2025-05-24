@@ -3,7 +3,7 @@ import Ilustration2 from '../assets/Illustration2.svg'
 
 const AiOptmizeSection = () => {
     return (
-        <div className='container-full bg-[#6DE754] mt-35 py-10 flex flex-col'>
+        <div className='container-full overflow-clip bg-[#6DE754] mt-35 py-10 flex flex-col'>
             <div className='container-auto flex flex-row max-md:flex-wrap '>
                 <div className='flex flex-col justify-center max-md:items-center max-md:text-center gap-10 max-w-[660px]'>
                     <span className='max-md:text-4xl max-md:px-8 text-6xl text-wrap font-bold max-md:text-center'>Free AI cover letter generator powered by GPT</span>

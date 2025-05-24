@@ -75,7 +75,7 @@ const Hero = () => {
     },)
 
     return (
-        <div className='container-auto mt-20' ref={container}>
+        <div className='container-auto mt-20 overflow-clip ' ref={container}>
             <div className='text-[88px] hero-text-animation flex flex-col justify-center items-center font-semibold text-center max-md:text-5xl'>
                 <span ref={text} className='green-text'>Win your dream job</span>
                 <span ref={text2} className='text-white'>with PostJob</span>
