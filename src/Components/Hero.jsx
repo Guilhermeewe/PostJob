@@ -88,7 +88,7 @@ const Hero = () => {
             <div className='flex container-auto justify-center items-center'>
                 <div ref={inputRef} className='flex justify-center items-center relative w-[700px] max-md:w-[300px]'>
                     <input type="text" placeholder='Your Email' className='gray-text font-extrabold border-2 rounded-lg py-5 px-5 w-full outline-none ' />
-                    <button type="submit" ref={buttonRef} className='py-2 px-12 max-md:px-4 absolute rounded-xl right-3 text-black background-button'>Start For Free</button>
+                    <button type="submit" ref={buttonRef} className='hover:scale-x-105 duration-300 py-2 px-12 max-md:px-4 absolute rounded-xl right-3 text-black bg-green-500'>Start For Free</button>
                 </div>
             </div>
 

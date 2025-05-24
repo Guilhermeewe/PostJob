@@ -13,6 +13,8 @@ const Header = () => {
     const logoRef = useRef()
     const [isOpen, setIsOpen] = useState(false)
 
+    const navItems = ['AI Cover Letter Generator', 'Resume Template', 'Pricing'];
+
     const toogleMenuHeader = (e) => {
         setIsOpen(!isOpen)
     }
@@ -41,17 +43,23 @@ const Header = () => {
                     <FcMenu size={35} onClick={toogleMenuHeader} />
                 </div>
                 <div className='flex grow max-md:hidden' >
-                    <ul className='flex text-center flex-row gap-6 text-[16px] gray-text font-bold max-md:hidden ' ref={navBarRef}>
-                        <li>AI Cover Letter Generator</li>
-                        <li>Resume Template</li>
-                        <li>Pricing</li>
+                    <ul className='flex text-center flex-row gap-6 text-[16px] gray-text font-bold max-md:hidden' ref={navBarRef}>
+                        {navItems.map((e) => (
+                            <li
+                                key={e}
+                                className='group'
+                            >
+                                {e}
+                                <span className="block h-[1px] bg-green-300 scale-x-0 group-hover:scale-x-100 transition-transform " />
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className='flex gap-4 font-semibold max-md:hidden pr-2' ref={buttonsRef}>
-                    <button type='text' className='border-2 py-2 px-8 rounded-xl text-white border-green-500 '>
+                    <button type='text' className='hover:scale-x-105 duration-300 border-2 py-2 px-8 rounded-xl text-white border-green-500 '>
                         Sign In
                     </button>
-                    <button type='text' className='bg-green-500 py-2 px-8 rounded-xl'>
+                    <button type='text' className='hover:scale-x-105 duration-300 bg-green-500 py-2 px-8 rounded-xl'>
                         Get Started
                     </button>
                 </div>

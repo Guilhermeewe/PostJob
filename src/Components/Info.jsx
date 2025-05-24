@@ -25,7 +25,6 @@ const Info = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
-                markers: true,
                 start: '200px center',
                 end: 'bottom center'
             }
@@ -66,7 +65,7 @@ const Info = () => {
                     <p>your job search</p>
                 </div>
                 <div className='flex justify-center items-center' ref={buttonRef}>
-                    <button className='py-4 px-8 border-2 w-60 rounded-2xl border-[#6DE754] text-white font-bold' type='submit'>Create an Account</button>
+                    <button className='hover:scale-x-105 duration-300 py-4 px-8 border-2 w-60 rounded-2xl border-[#6DE754] text-white font-bold' type='submit'>Create an Account</button>
                 </div>
 
                 <div ref={cardRef} className='flex flex-wrap justify-center items-center gap-8 mt-15'>
